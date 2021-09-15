@@ -10,12 +10,12 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: Arch
     steps:
       - uses: actions/checkout@v2
       - name: action
         run: |
-          sudo apt-get install libsfml-dev
+          sudo pacman -S sfml cmake gcc
           mkdir build
           cd build
           cmake ..
